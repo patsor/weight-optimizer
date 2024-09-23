@@ -2,11 +2,11 @@ package com.weight_optimizer;
 
 public class Pipe implements Part, Solid3D {
 
-    private final String name;
-    private final Material material;
-    private final int height;
-    private final int outerRadius;
-    private final int innerRadius;
+    private String name;
+    private Material material;
+    private int height;
+    private int outerRadius;
+    private int innerRadius;
 
     public Pipe(String name, Material material, int height, int outerRadius, int innerRadius) {
         this.name = name;
