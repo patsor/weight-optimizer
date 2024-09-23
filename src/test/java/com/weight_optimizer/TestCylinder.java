@@ -7,13 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCylinder {
 
+    private Material materialAluminum;
+    private Material materialBalsa;
     private Cylinder c1;
     private Cylinder c2;
 
     @BeforeEach
     public void initMaterials() {
-        Material materialAluminum = new Material("aluminum");
-        Material materialBalsa = new Material("balsa");
+        materialAluminum = new Material("aluminum");
+        materialBalsa = new Material("balsa");
         c1 = new Cylinder("C1", materialAluminum, 5, 10);
         c2 = new Cylinder("C2", materialBalsa, 6, 7);
     }

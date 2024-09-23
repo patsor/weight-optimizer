@@ -7,13 +7,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCuboid {
 
+    private Material materialAluminum;
+    private Material materialBalsa;
     private Cuboid c1;
     private Cuboid c2;
 
     @BeforeEach
     public void initMaterials() {
-        Material materialAluminum = new Material("aluminum");
-        Material materialBalsa = new Material("balsa");
+        materialAluminum = new Material("aluminum");
+        materialBalsa = new Material("balsa");
         c1 = new Cuboid("C1", materialAluminum, 5, 10, 2);
         c2 = new Cuboid("C2", materialBalsa, 6, 7, 3);
     }
