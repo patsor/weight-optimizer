@@ -2,11 +2,11 @@ package com.weight_optimizer;
 
 public class Cuboid implements Part, Solid3D {
 
-    private String name;
-    private Material material;
-    private int length;
-    private int width;
-    private int height;
+    private final String name;
+    private final Material material;
+    private final int length;
+    private final int width;
+    private final int height;
 
     public Cuboid(String name, Material material, int length, int width, int height) {
         this.name = name;

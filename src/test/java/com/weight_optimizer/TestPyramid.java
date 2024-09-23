@@ -5,34 +5,33 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestCuboid {
-
-    private Cuboid c1;
-    private Cuboid c2;
+public class TestPyramid {
+    private Pyramid p1;
+    private Pyramid p2;
 
     @BeforeEach
     public void initMaterials() {
         Material materialAluminum = new Material("aluminum");
         Material materialBalsa = new Material("balsa");
-        c1 = new Cuboid("C1", materialAluminum, 5, 10, 2);
-        c2 = new Cuboid("C2", materialBalsa, 6, 7, 3);
+        p1 = new Pyramid("P1", materialAluminum, 5, 10, 2);
+        p2 = new Pyramid("P2", materialBalsa, 6, 7, 3);
     }
 
     @Test
     public void testGetVolume() {
-        assertEquals(100.0, c1.getVolume());
-        assertEquals(126.0, c2.getVolume());
+        assertEquals(33.333, p1.getVolume(), 1.5);
+        assertEquals(42.0, p2.getVolume(), 1.5);
     }
 
     @Test
     public void testGetWeight() {
-        assertEquals(270.0, c1.getWeight());
-        assertEquals(20.16, c2.getWeight());
+        assertEquals(89.99, p1.getWeight(), 1.5);
+        assertEquals(6.72, p2.getWeight(), 1.5);
     }
 
     @Test
     public void testGetSurfaceArea() {
-        assertEquals(160.0, c1.getSurfaceArea());
-        assertEquals(162.0, c2.getSurfaceArea());
+        assertEquals(108.94, p1.getSurfaceArea(), 0.5);
+        assertEquals(99.36, p2.getSurfaceArea(), 0.5);
     }
 }
